@@ -43,19 +43,18 @@ class _ShellDataTestState extends State<ShellDataTest> {
               data = value.outText;
 
               for (final op in value.outLines) {
-                final _newOp = op.replaceAll(RegExp('\\s{2,}'), ',').split(',');
+              final _newOp = op.replaceAll(RegExp('\\s{2,}'), ',').split(',');
 
-                final _inUse = _newOp[0] == '*';
-                final _bssid = _newOp[1];
-                final _ssid = _newOp[2];
-                final _mode = _newOp[3];
-                final _channel = int.parse(_newOp[4]);
-                final _rate = _newOp[5].split(' ').first;
-                final _signal = int.parse(_newOp[6]);
-                final _bars = _newOp[7].length;
-                final _security = _newOp[8];
+              final _inUse = _newOp[0] == '*';
+              final _bssid = _newOp[1];
+              final _ssid = _newOp[2];
+              final _mode = _newOp[3];
+              final _channel = int.parse(_newOp[4]);
+              final _rate = _newOp[5].split(' ').first;
+              final _signal = int.parse(_newOp[6]);
+              final _bars = _newOp[7].length;
+              final _security = _newOp[8];
 
-                
               }
             },
           ),

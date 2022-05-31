@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
+import 'package:someapp/logger/custom_logger.dart';
 
 class LoggerTest extends StatelessWidget {
   const LoggerTest({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var logger = Logger();
     return Scaffold(
       body: SizedBox(
         width: double.infinity,
@@ -16,19 +15,19 @@ class LoggerTest extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                logger.e('This is error msg');
+                showError('This is error message');
               },
               child: const Text('error'),
             ),
             ElevatedButton(
               onPressed: () {
-                logger.w('This is warning msg');
+                showWarning('This is warning message');
               },
               child: const Text('warning'),
             ),
             ElevatedButton(
               onPressed: () {
-                logger.i('This is info message');
+                showInfo('This is info message');
               },
               child: const Text('info'),
             ),
